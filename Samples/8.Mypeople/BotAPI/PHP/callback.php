@@ -139,6 +139,7 @@ function sendMessage($target, $targetId, $msg)
 	$url =  $API_URL_PREFIX."/mypeople/" .$target. "/send.xml?apikey=" .$MYPEOPLE_BOT_APIKEY;
 	
 	//CR처리. \n 이 있을경우 에러남
+	// urlencode 은 자체 실행
 	$msg = str_replace(array("\n",'\n'), "\r", $msg);		
 	
 	//파라미터 설정
